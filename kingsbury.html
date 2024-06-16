@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+  background-image: url("Kingsbury.jpg");
+    
+    height: 100%; 
+  
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; 
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; 
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  
+  background: rgba(107, 106, 99, 0.3);
+  padding: 5px 20px 15px 20px;
+  border: 1px solid rgb(71, 71, 64);
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=number] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4e4caf;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: rgb(17, 16, 16);
+}
+h2{
+    text-align: center;
+    color: #86380a;
+    font-size: 35px;
+}
+
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+<style>
+  div.gallery {
+    border: 3px solid black;
+  
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    text-align:justify;
+  }
+  
+  * {
+    box-sizing: border-box;
+  
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 33.33%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  </style>
+</head>
+<body>
+   
+<h2>Room Reservation Form</h2>
+<p>Please, fill this form to reserve a hotel room for you.</p>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Room Reservation Form</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="enter your name">
+
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="enter your email address">
+
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="enter your address">
+
+            <label for="tel"><i class="fa fa-phone"></i> Telephone number</label>
+            <input type="text" id="tel" name="telephone number" placeholder="enter your tel. No">
+
+            <label for="room"><i class="fa fa-bed"></i> Room Type</label>
+            <input type="text" id="room" name="room" placeholder="single">
+
+            <label for="numberofadults"><i class="fa fa-male"></i> Number of adults</label>
+            <input type="number" id="numberofadults" name="numberofadults" placeholder="1">
+
+            <label for="numberofkids"><i class="fa fa-child"></i> Number of kids</label>
+            <input type="number" id="numberofkids" name="numberofkids" placeholder="1">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="check In">Check In</label>
+                <input type="date"  id="CheckInDate" name="CheckInDate"value="2021-01-01" min="2021-01-01"
+                max="2500-12-31" required> 
+               
+              </div>
+              <div class="col-50">
+                <label for="check Out">Check Out</label>
+                <input type="date"  id="CheckoutDate" name="CheckOutDate"value="2021-01-01" min="2021-01-01"
+                max="2500-12-31" required> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:rgb(247, 229, 195);"></i>
+            </div>
+            <label for="Payment method">Payment Method</label>
+            <input type="text" id="payment method" name="payment method" placeholder="Cash" >
+                
+            <label for="cname">Name of the Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+          
+        </div><br>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> I accept all the terms and conditions of the service
+        </label>
+        <input type="submit" value="Book Now" class="btn">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4>Total Bill <span class="price" style="color:black"><i class="fa fa-money"></i> <b>4</b></span></h4>
+      <p><a href="#">Pool</a> <span class="price">$15</span></p>
+      <p><a href="#">Internet</a> <span class="price">$5</span></p>
+      <p><a href="#">Parking</a> <span class="price">$8</span></p>
+      <p><a href="#">Air condition</a> <span class="price">$2</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="galadarisingleroom.jpg">
+      <img src="Single5.jpg" alt="galadarisingleroom" width="600" height="400">
+    </a>
+    <div class="desc"><b>Single Bed Room</b> 
+      <p>Single bed</p>
+      <p>From $80</p>
+      <p>15m<sup>2</sup></p>
+      <p><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+        
+</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="galadaridoubleroom.jpg">
+      <img src="double5.jpg" alt="galadaridoubleroom" width="600" height="400">
+    </a>
+    <div class="desc"><b>Double Bed Room</b> 
+      <p>Queen size bed</p>
+      <p>From $85</p>
+      <p>25m<sup>2</sup></p>
+      <p><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+        
+</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="galadarideluxeroom.jpg">
+      <img src="deluxe5.jpg" alt="galadarideluxeroom" width="600" height="400">
+    </a>
+    <div class="desc"><b>Deluxe Bed Room</b> 
+      <p>King-size bed</p>
+      <p>From $90</p>
+      <p>40m<sup>2</sup></p>
+      <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+        
+</div>
+  </div>
+</div>
+
+
+
+
+<div class="clearfix"></div>
+
+</body>
+</html>

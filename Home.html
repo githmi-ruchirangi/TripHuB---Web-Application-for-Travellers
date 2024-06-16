@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Travelling</title>
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+
+.container {
+  position: relative;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+
+.column {
+  float: left;
+  width: 16.66%;
+
+}
+
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #191970;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 25px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #7B68EE;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.logo{
+        position: absolute;
+        margin-top: -1px;
+        margin-left: 20px;
+ 
+      }
+
+</style>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.travelling-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("xxx.jpg");
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.travelling-text {
+  text-align: center;
+margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.travelling-text button {
+ width: 150px;
+border: none;
+outline: none;
+color:white;
+height: 50px;
+border-radius: 30px;
+margin-top: 10px;
+margin-bottom: 100px;
+ background-color: #8B0000;
+box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+}
+
+.travelling-text button:hover {
+  background-color: none;
+  color: #DC143C;
+}
+</style>
+
+<style>
+
+
+.text{
+ height: 60px;
+  width: 100%;
+  background-color: dodgerblue;
+text-align:center;
+padding-top:10px;
+padding-bottom:70px;
+font-size: 30px;
+color:white;
+}
+</style>
+
+<style>
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  body{
+      background-color: #f5f7f9;
+      font-family: Open Sans,sans-serif;
+  }
+  img{
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+  }
+  .box{
+      width: 22%;
+      float: left;
+      margin: 50px 20px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  }
+  .box b4{
+      margin-bottom: 10px;
+     
+  }
+  .box p{
+      font-size: 15px;
+      line-height: 28px;
+      height: 90px;
+      overflow: hidden;
+  }
+  .box a{
+      display: inline-block;
+      color: #fff;
+      background-color: #2196f3;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+  }
+  .box a:hover{
+      box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  }
+  .box.showContent p{
+      height: auto;
+  }
+  .box.showContent a.readmore-btn{
+      background-color: red;
+  }
+  
+</style>
+
+</head>
+
+<body>
+<div class="logo"><a href="#"><img src="Capture.PNG"></a>
+
+      </div>
+
+
+<ul>
+  <li><a href="Log_In.html">Log_In</a></li>
+  <li><a href="About_Us.html">About_Us</a></li>
+  <li><a href="Contact_Us.html">Contact_Us</a></li>
+  <li><a href="Home.html">Home</a></li>
+ 
+</ul>
+
+
+<div class="travelling-image">
+  <div class="travelling-text">
+    <h1 style="font-size:50px">Welcome to TripHuB</h1>
+    <p>Endless beaches, timeless ruins, welcoming people, oodles of elephants, rolling surf, cheap prices,
+ fun trains, famous tea, tropical climate and flavourful food make Sri Lanka irresistible. Sri Lanka is spectacular, affordable and still often uncrowded. </p>
+ 	<p>Now is the best time to discover it. So, hurry up and join with us. We make your journey more comfortable and enjoyable.</p>
+    <a href="./Registration.html"><button>Register Now</button></a>
+  </div>
+</div>
+
+<div class="text">
+<p>Hello! Sri Lanka</p></div> 
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="wild.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="thrills.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="nature.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4/ 6</div>
+    <img src="heritage.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">5/ 6</div>
+    <img src="beach.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">6/ 6</div>
+    <img src="corals.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="wild.jpg" style="width:100%" onclick="currentSlide(1)" alt="Wild  life">
+    </div>
+ 
+    <div class="column">
+      <img class="demo cursor" src="thrills.jpg" style="width:100%" onclick="currentSlide(2)" alt="Thrills ">
+    </div>    
+ 
+    <div class="column">
+      <img class="demo cursor" src="nature.jpg" style="width:100%" onclick="currentSlide(3)" alt="Nature ">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="heritage.jpg" style="width:100%" onclick="currentSlide(4)" alt="Heritage">
+    </div>
+<div class="column">
+      <img class="demo cursor" src="beach.jpg" style="width:100%" onclick="currentSlide(5)" alt="Beach">
+    </div>
+<div class="column">
+      <img class="demo cursor" src="corals.jpg" style="width:100%" onclick="currentSlide(6)" alt="Corals">
+    </div>
+  </div>
+</div>
+
+<div class="box">
+  <img src="Sinharaja2.jpg">
+  <h3>Sinharaja Rainforest</h3>
+  <p>Encompassing the last extensive patch of primary lowland rainforest in Sri Lanka, Sinharaja Forest Reserve 
+      is situated in the south-west lowland wet zone of Sri Lanka. Covering an area of 8,864 ha and ranging from 
+      an altitude of 300 – 1,170 meters, it consists of 6,092 ha of Forest Reserve and 2,772 ha of Proposed Forest
+       Reserve. This narrow strip of undulating terrain encompasses a series of ridges and valleys that are 
+       crisscrossed by an intricate network of streams. Draining to both the south and north, this detailed matrix
+        of waterways flow into the Gin River on the southern boundary of the property and Kalu River via the 
+        Napola Dola, Koskulana Ganga and Kudawa Ganga on its northern boundary. Annual rainfall over the last 60 
+        years has ranged from 3614 - 5006 mm with most of the precipitation during the south-west monsoon 
+        (May-July) and the north-east monsoon (November- January). Sri Lanka is home to 830 endemic species,
+         of which 217 trees and woody climbers are found in the low land wet zone. Of these, 139 (64%) have been
+          recorded in the reserve including 16 rare species.</p>
+          <a href="javasript:void();"class="readmore-btn">Read More</a>
+</div>
+
+<div class="box">
+  <img src="Battalangunduwa1.jpeg">
+  <h3>Battalanguduwa</h3>
+  <p>Battalangunduwa is a beautiful island covering an area of 150 hectares. From the Kalpitiya jetty you
+     have to travel about 28 nautical miles to reach Battalangunduwa Island. Innocent islanders, who make
+     a living from fishing, live a different kind of life on this island. Battalangunduwa Island is 
+     undoubtedly a perfect place to enjoy a cool evening breeze, a spectacular view of the setting sun, 
+     or a night of tents and the sweet sound of the waves crashing against the shore.Located about 25 
+     nautical miles from Kalpitiya Jetty. The natural beauty of this place is very high, which can be
+     reached after a journey of about 3.5 hours in a normal passenger boat.Battalangundu is located on the
+     northwestern side of the sea on the map of Sri Lanka. If you look closely you will see that there are
+     14 islands.Battalangunduwa is the second largest island after Uchchimune and Mohontuwarama. Also,
+     Battalangunduwa is located at a distance of about 25 km from the mainland, about 25 km away.
+     Battalangunduwa Island covers an area of 145.53 hectares. The area of Palliyawatta Island is 60.89 
+     hectares and Uchchimune is 449.3 hectares. 715.14 hectares at the moment. </p>
+          <a href="javasript:void();"class="readmore-btn">Read More</a>
+</div>
+
+<div class="box">
+  <img src="Liptonseat2.jpeg">
+  <h3>Lipton-Seat</h3>
+  <p>Lipton’s Seat is a high observation point in the hills of Poonagala. Located on the top of the town’s
+     namesake, Poonagala Hill, it is also near the Dambatenne Tea Factory. Lipton’s Seat is so named because
+     the famed Scottish baron and tea planter Sir Thomas Lipton used it as the seat to survey his empire in a
+     time long gone but not forgotten.The point of Lipton’s Seat is reached by climbing for around 7km 
+     surrounded by peaceful green tea plantations and an occasional colorful tea plucker. There are two 
+     routes available; one from the Nayabedda estate in Bandarawela, and the second through the Dambatenna 
+     estate in Haputale. Both routes have entrances marked with sign boards and narrow paved roads. 
+     Some parts of the road even have some of the original stone constructions from the British era of 
+     Ceylon, and hence are worth seeing from a historical point of view. The climb takes about two and a 
+     half hours on average, after a visitor reaches the hill top.From Lipton’s Seat the Uva, Sabaragamuwa, 
+     Central and Eastern provinces spread out from before the feet of the viewer in a display rivaling that
+     of the famed World’s End observation point. </p>
+     <a href="javasript:void();"class="readmore-btn">Read More</a>
+</div>
+
+<div class="box">
+  <img src="Edishem2.jpg">
+  <h3>Adisham Bunglow</h3>
+  <p>Adisham Hall, or Adisham Bungalow is a country house near Haputale, in the Badulla District, Sri Lanka.
+     At present it houses the Adisham Monastery a congregation of St. Sylvester.The house was built in 1931 
+     by an English aristocrat and planter Sir Thomas Villiers, former Chairman of George Steuart Co, a 
+     trading and estate agency based in Colombo. Sir Thomas was a grandson of Lord John Russell and 
+     descendant of the Dukes of Bedford. It was designed by R. Booth and F. Webster in Tudor and Jacobean 
+     style, on 10 acres (40,000 m2) of land. Adisham Hall played host to many prominent personalities of 
+     the colony until the retirement of Sir Thomas, after which it was sold to Sedawatte Mills. In 1961 it 
+     was purchased by the Roman Catholic Church and was subsequently converted to a monastery. The house is 
+     well preserved along with its period fittings and furniture, and is open to visitors.Sir Thomas was 
+     always aware of his responsibilities and thus was in touch with the directors at of George Stuarts 
+     until his very last days. In the late fifties Sir Thomas wrote a letter to the Wages Commission 
+     mentioning that it was very necessary to introduce weekly wages in Ceylon. After enjoying a healthy 
+     and a vigorous life Sir Thomas Villiers passed away on December 21st in 1959. </p>
+     <a href="javasript:void();"class="readmore-btn">Read More</a>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js">
+</script>
+<script>
+$(".readmore-btn").on('click', function(){
+    $(this).parent().toggleClass("showContent");
+    var replaceText=$(this).parent().hasClass("showContent") ? "Read Less" : "Read More";
+    $(this).text(replaceText);
+});
+</script>
+
+</body>
+<html>

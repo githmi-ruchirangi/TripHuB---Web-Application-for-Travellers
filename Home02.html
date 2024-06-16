@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Travelling</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+
+	<link rel="stylesheet" href="style06.css">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .checked {
+    color: orange;
+  }
+  </style>
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial;
+font-size: 17px;
+}
+
+.container {
+position: relative;
+max-width: 800px;
+
+margin: 0 auto;
+}
+
+.container img {
+  vertical-align: middle;
+  max-height: 400px;
+}
+
+.container .content {
+position: absolute;
+bottom: 0;
+background: rgb(0, 0, 0); 
+background: rgba(0, 0, 0, 0.5); 
+color: #f1f1f1;
+width: 96%;
+padding: 10px;
+}
+h2{
+font-size: 10px;
+color: white;
+}
+h3{
+font-size: 7px;
+color: white;
+}
+.button {
+background-color: #4CAF50;
+border:2px solid white; 
+color: white;
+padding: 13px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 900px;
+cursor: pointer;
+border-radius: 12px;
+}
+</style>
+<style>
+  #more {display: none;}
+  .readmorebtn{
+      background-color: rgb(87, 174, 245);
+      box-shadow: 0 5px 5px rgba(72, 217, 236, 0.2);
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      display: inline-block;
+      color: #fff;
+  }
+  </style>
+<style>
+.checked {
+  color: orange;
+}
+</style>
+<style>
+.button {
+  background-color: #4CAF50;
+  border:2px solid white; 
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 215px;
+  cursor: pointer;
+border-radius: 12px;
+}
+.button2 {
+  background-color: rgb(209, 89, 42);
+  border:2px solid rgb(253, 83, 4); 
+  color: black;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 1px 2px;
+  cursor: pointer;
+border-radius: 12px;
+}
+.button3 {
+  background-color: #b32d2d;
+  border:2px solid white; 
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 215px;
+  cursor: pointer;
+border-radius: 12px;
+}
+</style>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkorange;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 25px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: lightpink;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.logo{
+        position: absolute;
+        margin-top: 2px;
+        margin-left: 20px;
+ 
+      }
+
+
+</style>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.travelling-image {
+  background-image:  url("bbb.jpg");
+  height: 70%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.travelling-text {
+  text-align: center;
+
+margin-top: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: orangered;
+}
+h2{
+color:maroon;
+}
+h1{
+font-size: 70px;
+}
+
+
+</style>
+<style>
+* {box-sizing: border-box}
+
+.tablink {
+  background-color: darkorange;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 12.5%;
+}
+
+.tablink:hover {
+  background-color: rgb(192, 26, 62);
+}
+
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 340%;
+}
+
+#Location {background-color: darkorange;}
+#Hotels {background-color: mediumseagreen;}
+#Accommodations {background-color: steelblue;}
+#Vehicle_Renting {background-color: lightcoral;}
+#Guiders {background-color: tomato;}
+#Train_Booking {background-color: lightsalmon;}
+#Special_Offers {background-color: blueviolet;}
+#members {background-color: yellowgreen;}
+
+</style>
+<style>
+div.gallery {
+  border: 3px solid black;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  text-align:justify;
+}
+
+* {
+  box-sizing: border-box;
+
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+<style>
+h2{
+text-align: center;
+color:white;
+font-size:35px;
+}</style>
+
+<style>
+h3{
+text-align: center;
+color:white;
+font-size:25px;
+}</style>
+
+<style>
+  div.gallery2 {
+    border: 3px solid black;
+  }
+  
+  div.gallery2:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery2 img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc2 {
+    padding: 15px;
+    text-align: center;
+    text-align:justify;
+  }
+  
+  * {
+    box-sizing: border-box;
+  
+  }
+  
+  .responsive2 {
+    padding: 0 6px;
+    float: left;
+    width: 33.333%;
+    
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .responsive2 {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive2 {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  </style>
+
+<style>
+  body{
+     
+      background-size: cover;
+      text-align: center;
+      
+      }
+      
+  table {
+    border-collapse:collapse;
+    border-spacing: 0;
+    width: 70%;
+    border: 1px solid #ddd;
+    margin-left: 200px;
+    
+  }
+  .Heading{
+    color: rgb(8, 8, 8);
+  
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+    color:black;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+    
+  }
+  tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.4);
+    
+  }
+  
+  
+  </style>
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column5 {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  a {
+    
+    font-size: 22px;
+    color: black;
+  }
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column5 {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .card5 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(37, 146, 146);
+  }
+  
+  .container5 {
+    padding: 0 16px;
+   
+  }
+  
+  .container5::after, .row5::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title5 {
+    color: rgb(8, 8, 8);
+  }
+  
+  .button5 {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    
+  }
+  
+  .button5:hover {
+    background-color: #555;
+  }
+  </style>
+
+<style>
+  body {
+    font-family: Arial;
+  }
+  
+  .coupon5 {
+    border: 5px dotted #bbb;
+    width: 80%;
+    border-radius: 15px;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .container5 {
+    padding: 2px 16px;
+  
+  }
+  
+  .promo {
+    background: rgb(252, 235, 9);
+    padding: 3px;
+  }
+  
+  .expire {
+    color: red;
+  }
+  .container5.ul {
+    list-style-type: square;
+   
+  }
+  span.no {
+    text-decoration: line-through;
+    color:red;
+  }
+  span.yes {
+    
+    color:rgb(36, 151, 46);
+  }
+  </style>
+
+<style>
+  * {box-sizing: border-box;}
+  
+  .container07 {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+   
+  
+  }
+  
+  .image07 {
+    display: block;
+    width: 180%;
+    height: auto;
+   
+  }
+  
+  .overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1; 
+    width: 180%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container07:hover .overlay {
+    opacity: 1;
+  }
+  .column {
+    float: left;
+    width:25%;
+    padding: 5px;
+  }
+  
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  </style>
+
+
+</head>
+<body>
+<div class="logo"><a href="#"><img src="Capture.PNG"></a>
+
+      </div>
+<ul>
+  <li><a href="Log_In.html">Log_In</a></li>
+  <li><a href="About_Us.html">About_Us</a></li>
+  <li><a href="Contact_Us.html">Contact_Us</a></li>
+  <li><a href="Home.html">Home</a></li>
+ 
+</ul>
+
+<div class="travelling-image">
+  <div class="travelling-text">
+ <h1 class="font-effect-fire">Plan Your Trip</h1>  
+<h2 style="font-size:30px">with TravelHuB</h2>
+  
+   <div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+          <input class="search_input" type="text" name="" placeholder="Search...">
+          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>	
+
+
+<button class="tablink" onclick="openPage('Location', this, 'darkorange')">Location</button>
+<button class="tablink" onclick="openPage('Hotels', this, 'mediumseagreen')" id="defaultOpen">Hotels</button>
+<button class="tablink" onclick="openPage('Accommodations', this, 'steelblue')">Accommodations</button>
+<button class="tablink" onclick="openPage('Vehicle_Renting', this, 'lightcoral')"id="defaultOpen">Vehicle Renting</button>
+<button class="tablink" onclick="openPage('Guiders', this, 'tomato')" id="defaultOpen">Guiders</button>
+<button class="tablink" onclick="openPage('Train_Booking', this, 'lightsalmon')">Train  Booking</button>
+<button class="tablink" onclick="openPage('Special_Offers', this, 'blueviolet')">Special Offers</button>
+<button class="tablink" onclick="openPage('members', this, 'yellowgreen')">Members </button>
+<div id="Location" class="tabcontent">
+<h2>Google Map</h2>
+<h3>See your Location</h3><br>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15837.511325552045!2d80.0199555!3d7.0821217999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1616486967261!5m2!1sen!2slk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<div id="Hotels" class="tabcontent">
+<h2>Hotels in Sri Lanka</h2>
+<h3>Find the Best Hotels in Sri Lanka on TripHuB</h3><br>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="galadari.jpg">
+      <img src="galadari.jpg" alt="Galadari" width="600" height="400">
+    </a>
+    <div class="desc"><b>Hotel Galadari, Colombo</b> <br>64 Lotus Rd, Colombo 00100<br>0112 544 544<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span><br>
+<button class="button"  onclick="document.location='galadariRoom.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="alakamandaanuradhapuraya.jpg">
+      <img src="alakamandaanuradhapuraya.jpg" alt="alakamandaanuradhapuraya" width="600" height="300">
+    </a>
+    <div class="desc"><b>Alakamanda Hotel, Anuradhapuraya</b>11 Nagasena Mawatha, Anuradhapura 50000<br>025 56 20 277<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+
+<button class="button" onclick="document.location='alakamandaRoom.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="citrrushikkaduwa.jpg">
+      <img src="citrrushikkaduwa.jpg" alt="citrrushikkaduwa" width="600" height="400">
+    </a>
+    <div class="desc"><b>Citrus Hotel, Hikkaduwa</b> 400 Galle Rd, Hikkaduwa 80240<br>091 55 60 005<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<button class="button" onclick="document.location='citrushotelroom.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="deerparkhotelpolonnaruva.jpg">
+      <img src="deerparkhotelpolonnaruva.jpg" alt="deerparkhotelpolonnaruva" width="600" height="400">
+    </a>
+    <div class="desc"><b>Deer Park Hotel, Polonnaruwa</b>B112, Girithale<br>027 22 46 272<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<button class="button" onclick="document.location='deerparkhotelroom.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ella.jpg">
+      <img src="ella.jpg" alt="ella" width="600" height="400">
+    </a>
+    <div class="desc"><b>Hotel EKHO, Ella</b>Sandungama Rd, Ella<br>057 22 28 655<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<button class="button" onclick="document.location='HotelEKHO.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="grandhotelnuwaraeliya.jpg">
+      <img src="grandhotelnuwaraeliya.jpg" alt="grandhotelnuwaraeliya" width="600" height="300">
+    </a>
+    <div class="desc"><b>Grand Hotel, Nuwara-Eliya</b> No. 05 Grand Hotel Road Nuwara Eliya, Nuwaraeliya<br>052 22 22 882<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<button class="button" onclick="document.location='grandhotelroom.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jaffna.jpg">
+      <img src="jaffna.jpg" alt="jaffna" width="600" height="400">
+    </a>
+    <div class="desc"><b>Jetwin Hotel, Jaffna</b>37, Mahatma Gandhi Road, Jaffna<br>021 22 15 571<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<button class="button" onclick="document.location='JetwngJaffna.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kandy.jpg">
+      <img src="kandy.jpg" alt="kandy" width="600" height="400">
+    </a>
+    <div class="desc"><b>Queens Hotel,Kandy</b> DS Senanayake Veediya, Kandy 20000<br>081 22 33 026<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<button class="button" onclick="document.location='Queens Kandy.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nilavelibeachhoteltrincomalee.jpg">
+      <img src="nilavelibeachhoteltrincomalee.jpg" alt="nilavelibeachhoteltrincomalee" width="600" height="400">
+    </a>
+    <div class="desc"><b>Nilaveli Beach Hotel, Tricomalee</b> 11th mile Post, Nilaveli<br>026 22 22 071<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<button class="button" onclick="document.location='Nilaweli.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="shangri-la.jpg">
+      <img src="shangri-la.jpg" alt="shangri-la" width="600" height="300">
+    </a>
+    <div class="desc"><b>Shangri-La Hotel, Colombo</b> 2/1 Colombo - Galle - Hambantota - Wellawaya Hwy, Colombo 00200<br>011 78 88 288<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<button class="button" onclick="document.location='Shangrila.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kingsbury.jpg">
+      <img src="kingsbury.jpg" alt="kingsbury" width="600" height="400">
+    </a>
+    <div class="desc"><b>Kingsbury Hotel, Colombo</b>48 Janadhipathi Mawatha, Colombo<br>011 24 21 221<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br>
+<button class="button" onclick="document.location='kingsbury.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cinnamongrand.jpg">
+      <img src="cinnamongrand.jpg" alt="cinnamongrand" width="600" height="400">
+    </a>
+    <div class="desc"><b>Cinnamon Grand Hotel, Colombo</b>77 Galle Rd, Colombo 00300<br>011 24 37 437<br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span><br>
+<button class="button" onclick="document.location='Cinnamon Grand.html'">Book</button>
+<button class="button2">See Offers</button>
+</div>
+  </div>
+</div>
+
+<div class="clearfix"></div><br><br>
+<p>If you are willing to register your Hotel in TripHuB, Please be kind to fill our registration form.</p>
+<button class="button3" onclick="document.location='HotelReg.html'">Register my Hotel</button>
+</div>
+
+
+<div id="Accommodations" class="tabcontent">
+  <div class="container">
+    <img src="DolceCasa.jpg" alt="Notebook" style="width:100%;">
+    <div class="content">
+      <h2>Dolce Casa</h2>
+      <h3>Havelock Town, Colombo</h3>
+      <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span><br>
+  
+      <p>Situated in Colombo, 2.8 km from Mount Lavinia Beach, Dolce Casa features accommodation with a restaurant,
+           free private parking, a bar and a terrace. The property is set 3.7 km from U.S. Embassy,
+            7 km from Khan Clock Tower and 8 km from R Premadasa Stadium.<span id="dots1">...</span><span id="more1"> The accommodation offers room service and free WiFi.
+            The property was incredibly clean. The rooms had lots of storage and large in size. The bathroom was large and 
+                and had really good shower space. At the guest house, all rooms are fitted with a desk. At Dolce Casa rooms are included air conditioning also.
+              </span></p>
+              <button onclick="myFunction1()" id="myBtn1" class="readmorebtn">Read more</button>
+              <button class="button" onclick="document.location='dolcecasabook.html'">Book</button>
+    </div>
+  </div>
+  <br><br>
+  <div class="container">
+      <img src="jungleviewapartment.jpg" alt="Notebook" style="width:100%;">
+      <div class="content">
+        <h2>Jungle View Apartment</h2>
+        <h3>Hikkaduwa, Unavatuna</h3>
+        <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span><br>
+    
+        <p>Set in Unawatuna, this air-conditioned apartment features a balcony. The property boasts views of the lake is 23 km from Hikkaduwa. Free WiFi is featured .
+  
+          There is a seating area, a dining area and a kitchen equipped with a toaster.<span id="dots2">...</span><span id="more2"> Towels and bed linen are provided in this apartment.
+  
+              Galle is 6 km from Jungle View apartment.Free WiFi, Airport shuttle, Family rooms, Spa and wellness centre and Fitness centre. Pets allowed.
+                </span></p>
+                <button onclick="myFunction2()" id="myBtn2" class="readmorebtn">Read more</button>
+                <button class="button" onclick="document.location='jungleviewapartmentbook.html'">Book</button>
+      </div>
+    </div>
+  
+    <br><br>
+  <div class="container">
+      <img src="liyonrest.jpg" alt="Notebook" style="width:100%;">
+      <div class="content">
+        <h2>Liyon Rest</h2>
+        <h3>Sigiriya, Central province</h3>
+        <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span><br>
+    
+        <p>Liyon Rest is located in Sigiriya and provides comfortable stay. Free WiFi access is available in the rooms of the property.
+  
+          Each air-conditioned room here will provide you with safety deposit box. Featuring a shower, private bathroom comes with free toiletries. 
+          You can enjoy lake and mountain view from the room.<span id="dots3">...</span><span id="more3"> An array of activities can be enjoyed on site or in the surroundings,
+               including cycling. The property offers free parking. Room service is available. Free Wifi.
+  
+              The guest house is 11.8 km from the famous Minneriya National Park . The SLAF Anuradhapura Airport is 52 km away.
+              
+              
+                </span></p>
+                <button onclick="myFunction3()" id="myBtn3" class="readmorebtn">Read more</button>
+                <button class="button" onclick="document.location='liyonrestbook.html'">Book</button>
+      </div>
+    </div>
+  
+    <br><br>
+    <div class="container">
+        <img src="palithaguesthouse.jpg" alt="Notebook" style="width:100%;">
+        <div class="content">
+          <h2>DANDELION - Palitha guest house</h2>
+          <h3>Southern province, Unawatuna</h3>
+          <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span><br>
+      
+          <p>Offering a spa and wellness centre, Palitha Guest House provides a 24-hour front desk for the convenience of the guests.
+               Free WiFi access is available in the public areas of the property.<span id="dots4">...</span><span id="more4"> Each room here 
+                   will provide you with work desk and a seating area. There is also a dining table. Private bathroom comes with a bath or shower. 
+                   You can enjoy garden view from the balcony.
+  
+                  At Palitha Guest House you will find a garden and barbecue facilities.
+                   Other facilities offered at the property include grocery deliveries, water sports facilities and a tour desk.
+                    An array of activities can be enjoyed on site or in the surroundings, including cycling, fishing and hiking. The property offers free parking.
+                
+                
+                  </span></p>
+                  <button onclick="myFunction4()" id="myBtn4" class="readmorebtn">Read more</button>
+                  <button class="button" onclick="document.location='palithaguesthousebook.html'">Book</button>
+        </div>
+      </div>
+  
+      <br><br>
+    <div class="container">
+        <img src="iwamisou.jpg" alt="Notebook" style="width:100%;">
+        <div class="content">
+          <h2>Iwamisou</h2>
+          <h3>Central province, Matale</h3>
+          <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span><br>
+      
+          <p>Boasting a shared lounge, garden and views of garden, Iwamisou is set in Sigiriya, 2.3 km from Sigiriya Rock. Among the facilities
+               of this property are a restaurant, a 24-hour front desk and room service, along with free WiFi. The accommodation offers an ATM, a tour desk and currency exchange for guests.
+  
+              At the guest house, all rooms have a balcony.<span id="dots5">...</span><span id="more5"> Guests at Iwamisou can enjoy an American breakfast.
+                  Airport shuttle, Non-smoking rooms, Room service, Free WiFi, Free parking and Very good breakfast available.
+                  </span></p>
+                  <button onclick="myFunction5()" id="myBtn5" class="readmorebtn">Read more</button>
+                  <button class="button" onclick="document.location='iwamisou.html'">Book</button>
+        </div>
+      </div>
+      <p>If you are willing to register your rental house  in TripHuB, Please be kind to fill our registration form.</p>
+<button class="button3" onclick="document.location='AccomReg.html'">Register Accommodations</button>
+</div>
+
+<div id="Vehicle_Renting" class="tabcontent">
+
+  <h2>Vehicle Renting</h2>
+  <h3>Cars</h3>
+  
+  <div class="responsive2">
+    <div class="gallery2">
+      <a target="_blank" href="alto01.jpg">
+        <img src="alto01.jpg" alt="alto" width="600" height="400">
+      </a>
+      <div class="desc2"><b>Susuki Alto</b> Experience a reliable and hassle-free Budget Taxi Transfers experience in Sri Lanka with:<br>
+
+          Daily Price fromLKR 2500<br>
+          Per Km Price fromLKR 25<br>
+          Well maintained Car<br>
+          Max Passengers 4<br>
+          USB/ Charger<br>
+           Ac, mp3, without driver<br>
+          
+          Contact NO: 077 41 58 636<br>
+          Water Bottles, First Aid Box, Baby Seats<br>
+           Airport Meet and Greet Services</div>
+   <button class="button" onclick="document.location='susukialtobook.html'">Book</button>
+    </div>
+  </div>
+  
+  
+  <div class="responsive2">
+    <div class="gallery2">
+      <a target="_blank" href="vezel01.jpg">
+        <img src="vezel01.jpg" alt="vezal" width="600" height="300">
+      </a>
+      <div class="desc2"><b>Honda-Vezal</b>  Book your Car with Best travel Service in Sri Lanka.
+           Discover the best Honda Vezel Rental with TripHuB Sri Lanka<br>
+
+          Details in Brief:<br>
+          Daily Price fromLKR 10000<br>
+          Per Km Price from LKR 66<br>
+          ACDual, ACTV/DVD Player, MP3 Player, Cooler, Dash Cam, High Roof, Adjustable Seat, Sun Roof<br>
+          Passengers: 5<br>
+          Laggage: 2<br>
+          Other: AC, MP3, CD, Rent A Car Insurance<br>
+          Contact NO: 072 41 88 136<br>
+          </div>
+   <button class="button" onclick="document.location='hondavezalbook.html'">Book</button>
+    </div>
+  </div>
+  
+  <div class="responsive2">
+    <div class="gallery2">
+      <a target="_blank" href="allion01.jpg">
+        <img src="allion01.jpg" alt="allion" width="600" height="400">
+      </a>
+      <div class="desc2"><b>Toyota- Allion</b>Book your Car with Best Travel Service in Sri Lanka. Discover the best Toyota Allion  Rental
+           with Car TravelHuB Sri Lanka.<br>
+
+
+          Details in Brief:<br>
+          
+          Daily Price fromLKR 4000
+          Per Km Price fromLKR 30
+          AC, MP3 Player, Adjustable Seat <br>
+          Fuel: Petrol<br>
+          Passengers: 4<br>
+          Luggage: 1<br>
+          without driver<br> Contact No: 011 65 32 788<br>
+          </div>
+   <button class="button" onclick="document.location='toyotaallionbook.html'">Book</button>
+    </div>
+  </div>
+  
+  
+  
+  <div class="clearfix"></div>
+  
+  
+  
+  
+  <h3>Vans</h3>
+  
+  <div class="responsive2">
+    <div class="gallery2">
+      <a target="_blank" href="dolphin02.jpg">
+        <img src="dolphin02.jpg" alt="dolphin" width="600" height="400">
+      </a>
+      <div class="desc2"><b>Toyota Dolphin</b> Book your Van with Best Travel Service in Sri Lanka. Discover
+           the best Toyota Dolphin Rental with TripHuB Sri Lanka.<br>
+
+           Daily Price fromLKR 6000<br> 
+           Per Km Price fromLKR 60<br> 
+           Dual AC, MP3 Player, High Roof, Adjustable Seat<br> 
+          Engine: 2000cc <br>
+          Fuel: Diesel <br>
+          Max Passengers : 14 <br>
+          Luggage: 2 <br>
+          Contact No: 076 54 27 495<br> </div>
+  <button class="button" onclick="document.location='toyotadolphinbook.html'">Book</button>
+    </div>
+  </div>
+  
+  
+  <div class="responsive2">
+    <div class="gallery2">
+      <a target="_blank" href="noah01.jpg">
+        <img src="noah01.jpg" alt="NoaH" width="600" height="300">
+      </a>
+      <div class="desc2"><b>Toyota - NoaH<br> </b>For more comfortable journey..with friendly and experienced driver who worked as tourist
+           guide in Sri Lanka..prices can negotiable when necessary.<br> 
+          Daily Price fromLKR 8500<br> 
+          Per Km Price fromLKR 40<br> 
+          Dual AC, MP3 Player, High Roof, Adjustable Seat<br> 
+          Max Passengers 7<br> 
+     Contact No: 076 57776 95<br> 
+      </div>
+   <button class="button" onclick="document.location='toyotanoahbook.html'">Book</button>
+    </div>
+  </div>
+  
+  <div class="responsive2">
+    <div class="gallery2">
+      <a target="_blank" href="kdh01.jpg">
+        <img src="kdh01.jpg" alt="KDH" width="600" height="400">
+      </a>
+      <div class="desc2"><b>Toyota - KDH</b> Our price are affordable and fair. since we seek our clients satisfaction we
+           provide an attractive service and price for the journey.<br>
+           Contact No: 0094 112 888 788 <br>
+           ACDual, ACTV/DVD Player, MP3 Player, Cooler,<br>Adjustable Seat, Max Passengers 9<br>
+           With Driver,Daily Price from LKR 6000 ,Per Km Price fromLKR 40<br>
+           Without Driver, Daily Price fromLKR 5000, Per Km Price fromLKR 25<br>
+          
+          </div>
+  <button class="button" onclick="document.location='toyotaKDHbook.html'">Book</button>
+    </div>
+  </div>
+  
+  
+  
+  <div class="clearfix"></div>
+  
+  
+  
+  
+  <h3>Busses</h3>
+  
+  <div class="responsive2">
+    <div class="gallery2">
+      <a target="_blank" href="volvo01.jpg">
+        <img src="volvo01.jpg" alt="volvo" width="600" height="500">
+      </a>
+      <div class="desc2"><b>Volvo</b> For more comfortable journey..with friendly and experienced driver who worked as tourist
+          guide in Sri Lanka..prices can negotiable when necessary.<br>
+          Air conditionning<br>
+          Max passengers 45<br>
+          Daily Price fromLKR 25000<br>
+          With driver<br>
+          Contact No: 071 44 44 333
+      </div>
+   <button class="button" onclick="document.location='volvobusbook.html'">Book</button>
+   </div>
+  </div>
+  
+  
+  <div class="responsive2">
+    <div class="gallery2">
+      <a target="_blank" href="coaster01.jpg">
+        <img src="coaster01.jpg" alt="coaster" width="600" height="500">
+      </a>
+      <div class="desc2"><b>Mitsubhishi Coaster</b> For more comfortable journey..with friendly and experienced driver who worked as tourist
+          guide in Sri Lanka..prices can negotiable when necessary.
+  Daily Price fromLKR 12000<br>
+  Per Km Price fromLKR 55<br>
+  AC, Dual AC, TV/DVD Player<br>
+  Contact No: 077 45 46 382<br>
+ Max passengers 28<br>
+  with driver<br>
+</div>
+  <button class="button" onclick="document.location='mitsubhishicoaster.html'">Book</button>
+   </div>
+  </div>
+  
+  <div class="responsive2">
+    <div class="gallery2">
+      <a target="_blank" href="fuso01.jpg">
+        <img src="fuso01.jpg" alt="Fuso" width="600" height="500">
+      </a>
+      <div class="desc2"><b>Fuso </b>For more comfortable journey..with friendly and experienced driver who worked as tourist
+          guide in Sri Lanka..prices can negotiable when necessary.<br>
+          Daily Price fromLKR 10000<br>
+          Per Km Price fromLKR 100<br>
+          AC, Dual AC, TV/DVD Player, MP3 Player, Cooler, High Roof, Adjustable Seat<br>
+          Contact No: 077 35 46 992<br>
+         Max passengers 20<br>
+          with driver<br>
+      
+      </div><br>
+  <button class="button" onclick="document.location='fusobook.html'">Book</button>
+  </div>
+  </div>
+  
+  
+  
+  <div class="clearfix"></div>
+  <p>If you are willing to register your vehicle to rent out in TripHuB, Please be kind to fill our registration form.</p>
+<button class="button3" onclick="document.location='CarReg.html'">Register my Vehicle</button>
+</div>
+
+<div id="Guiders" class="tabcontent">
+
+  <h2>Tourist Guides</h2>
+<br>
+
+<div class="row5">
+  <div class="column5">
+    <div class="card5">
+      <img src="Guide1.jpg" alt="Jane" style="width:100%">
+      <div class="container5">
+        <h2>John Doe</h2>
+        <p class="title5">British Tourist Guide</p>
+        
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  
+  </div>
+        <p>janedoe@gmail.com</p>
+        <p><button class="button5" onclick="document.location='Hireme01.html'">Contact me</button><p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column5">
+    <div class="card5">
+      <img src="Guide2.jpg" alt="Mike" style="width:100%">
+      <div class="container5">
+        <h2>Michell Rossmari</h2>
+        <p class="title5">American Tourist Guide</p>
+        <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-dribbble"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+          
+          </div>
+        <p>michellrosmari@gmail.com</p>
+        <p><button class="button5" onclick="document.location='Hireme02.html'">Contact me</button><p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column5">
+    <div class="card5">
+      <img src="Guide3.jpeg" alt="John" style="width:100%">
+      <div class="container5">
+        <h2>Daniel Mike</h2>
+        <p class="title5">Russian Tourist Guide</p>
+        <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-dribbble"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+          
+          </div>
+        <p>danielmike@gmail.com</p>
+        <p><button class="button5" onclick="document.location='Hireme03.html'">Contact me</button><p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row5">
+  <div class="column5">
+    <div class="card5">
+      <img src="Guide4.jpg" alt="Jane" style="width:100%">
+      <div class="container5">
+        <h2>Pretty Johns</h2>
+        <p class="title5">British Tourist Guide</p>
+        <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-dribbble"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+          
+          </div>
+        <p>prettyjohns@gmail.com.com</p>
+        <p><button class="button5" onclick="document.location='Hireme04.html'">Contact me</button><p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column5">
+    <div class="card5">
+      <img src="Guide5.jpg" alt="Mike" style="width:100%">
+      <div class="container5">
+        <h2>Samuel Ronaldo</h2>
+        <p class="title5">American Tourist Guide</p>
+        <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-dribbble"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+          
+          </div>
+        <p>samuelronaldo@gmail.com</p>
+        <p><button class="button5" onclick="document.location='Hireme05.html'">Contact me</button><p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column5">
+    <div class="card5">
+      <img src="Guide6.jpg" alt="John" style="width:100%">
+      <div class="container5">
+        <h2>Gulati Thennir</h2>
+        <p class="title5">African Tourist Guide</p>
+        <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-dribbble"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+          
+          </div>
+        <p>gulatithennir@gmail.com</p>
+        <p><button class="button5" onclick="document.location='Hireme06.html'">Contact me</button><p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row5">
+  <div class="column5">
+    <div class="card5">
+      <img src="Guide7.jpg" alt="Jane" style="width:100%">
+      <div class="container5">
+        <h2>Mark Johanson</h2>
+        <p class="title5">British Tourist Guide</p>
+        <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-dribbble"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+          
+          </div>
+        <p>markjohanson@gmail.com</p>
+        <p><button class="button5" onclick="document.location='Hireme07.html'">Contact me</button><p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column5">
+    <div class="card5">
+      <img src="Guide8.jpg" alt="Mike" style="width:100%">
+      <div class="container5">
+        <h2>Roshel Fernandus</h2>
+        <p class="title5">American Tourist Guide</p>
+        <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-dribbble"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+          
+          </div>
+        <p>roshelfernandus@gmail.com</p>
+        <p> <button class="button5" onclick="document.location='Hireme08.html'">Contact me</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column5">
+    <div class="card5">
+      <img src="Guide9.jpg" alt="John" style="width:100%">
+      <div class="container5">
+        <h2>Mikal markal</h2>
+        <p class="title5">Chinese Tourist Guide</p>
+        <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-dribbble"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+          
+          </div>
+        <p>mikalmarkal@gmail.com</p>
+        
+        <p><button class="button5" onclick="document.location='Hireme09.html'">Contact me</button><p>
+      </div>
+    </div>
+  </div>
+</div><br>
+  <p>If you are willing to register in TripHuB as a guider, Please be kind to fill our registration form.</p>
+<button class="button3" onclick="document.location='GuideReg.html'">Register as a Guider</button>
+</div>
+
+<div id="Train_Booking" class="tabcontent">
+  <div class="Heading">
+    <h1>Train Time Table</h1>
+    <h2>Sri Lanka</h2>
+    </div>
+    <table>
+     
+      <tr>
+        
+        <th>S.N</th>
+        <th>Train Number</th>
+        <th>Train Name</th>
+        <th>Total distance</th>
+        <th>Date</th>
+        <th>Departure Time</th>
+        <th>Departure Railway Station</th>
+        <th>Arrival Time</th>
+        <th>Arrival Railway Station</th>
+      </tr>
+      <tr>
+        <td>0001</td>
+        <td>8059</td>
+        <td>Ruhunu Kumari</td>
+        <td>156km</td>
+        <td>Everyday</td>
+        <td>06.05a.m</td>
+        <td>Matara</td>
+        <td>08.51a.m</td>
+        <td>Colombo Fort</td>
+      </tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td>15.45p.m</td>
+       <td>Maradana</td>
+       <td>18.21p.m</td>
+       <td>Matara</td>
+    </tr>
+      <tr>
+        <td>0002</td>
+        <td>1015</td>
+        <td>Udarata Manike</td>
+        <td>294km</td>
+        <td>Everyday</td>
+        <td>05.45a.m</td>
+        <td>Badulla</td>
+        <td>15.27p.m</td>
+        <td>Colombo Fort</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>08.30a.m(Next Day)</td>
+        <td>Colombo Fort</td>
+        <td>17.44p.m</td>
+        <td>Badulla</td>
+      </tr>
+      <tr>
+        <td>0003</td>
+        <td>8056</td>
+        <td>Galu Kumari</td>
+        <td>156km</td>
+        <td>Everyday</td>
+        <td>06.12a.m</td>
+        <td>Matara</td>
+        <td>09.34a.m</td>
+        <td>Maradana</td>
+      </tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td>15.10p.m</td>
+       <td>Maradana</td>
+       <td>17.35p.m</td>
+       <td>Matara</td>
+    </tr>
+    <tr>
+        <td>0004</td>
+        <td>8086</td>
+        <td>Rajarata Rajina</td>
+        <td>409km</td>
+        <td>Everyday</td>
+        <td>08.45a.m</td>
+        <td>Beliaththa</td>
+        <td>19.53p.m</td>
+        <td>Vavunia</td>
+      </tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td>03.35a.m(Next Day)</td>
+       <td>Vavunia</td>
+       <td>14.35p.m</td>
+       <td>Beliaththa</td>
+    </tr>
+    <tr>
+        <td>0005</td>
+        <td>8088</td>
+        <td></td>
+        <td>279km</td>
+        <td>Everyday</td>
+        <td>05.00a.m</td>
+        <td>Kandy</td>
+        <td>11.50a.m</td>
+        <td>Matara</td>
+      </tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td>03.40a.m(Next Day)</td>
+       <td>Matara</td>
+       <td>21.00p.m</td>
+       <td>Kandy</td>
+    </tr>
+    <tr>
+        <td>0006</td>
+        <td>8089</td>
+        <td>Yal Devi</td>
+        <td>579km</td>
+        <td>Everyday</td>
+        <td>06.35a.m</td>
+        <td>Colombo Fort</td>
+        <td>14.35p.m</td>
+        <td>Jaffna</td>
+      </tr>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td>09.45a.m(Next Day)</td>
+       <td>Jaffna</td>
+       <td>18.32p.m</td>
+       <td>Colombo Fort</td>
+    </tr>
+    <button class="button" onclick="document.location='TrainBookingForm.html'">Book your Seat from here</button>
+    </table>
+</div>
+
+<div id="members" class="tabcontent">
+  <h1>Our Travel Members</h1>
+  <div class="row">
+    <div class="column">
+        <div class="container07">
+            <img src="Man1.jpeg" alt="Avatar" class="image07">
+            <div class="overlay">My Name is John</div>
+          </div><br>
+          
+    </div>
+    <div class="column">
+        <div class="container07">
+            <img src="girl1.jpg" alt="Avatar" class="image07">
+            <div class="overlay">My Name is Jeniffer</div>
+          </div>
+    </div>
+    <div class="column">
+        <div class="container07">
+            <img src="Man2.jpg" alt="Avatar" class="image07">
+            <div class="overlay">My Name is Smith</div>
+          </div>
+  </div>
+  <div class="column">
+    <div class="container07">
+        <img src="girl2.jpg" alt="Avatar" class="image07">
+        <div class="overlay">My Name is Raffel</div>
+      </div>
+</div>
+</div>
+<div class="row">
+    <div class="column">
+        <div class="container07">
+            <img src="Man3.jpg" alt="Avatar" class="image07">
+            <div class="overlay">My Name is Tom</div>
+          </div><br>
+          
+    </div>
+    <div class="column">
+        <div class="container07">
+            <img src="girl3.jpg" alt="Avatar" class="image07">
+            <div class="overlay">My Name is Dora</div>
+          </div>
+    </div>
+    <div class="column">
+        <div class="container07">
+            <img src="Man4.jpg" alt="Avatar" class="image07">
+            <div class="overlay">My Name is Henry</div>
+          </div>
+  </div>
+  <div class="column">
+    <div class="container07">
+        <img src="girl4.jpeg" alt="Avatar" class="image07">
+        <div class="overlay">My Name is Alex</div>
+      </div>
+</div>
+</div>
+<div class="row">
+    <div class="column">
+        <div class="container07">
+            <img src="Man5.jpeg" alt="Avatar" class="image07">
+            <div class="overlay">My Name is Ned</div>
+          </div><br>
+          
+    </div>
+    <div class="column">
+        <div class="container07">
+            <img src="girl5.jpeg" alt="Avatar" class="image07">
+            <div class="overlay">My Name is Juliya</div>
+          </div>
+    </div>
+    <div class="column">
+        <div class="container07">
+            <img src="Man6.jpeg" alt="Avatar" class="image07">
+            <div class="overlay">My Name is Fedric</div>
+          </div>
+  </div>
+  <div class="column">
+    <div class="container07">
+        <img src="girl6.jpeg" alt="Avatar" class="image07">
+        <div class="overlay">My Name is Elina</div>
+      </div>
+</div><br><br>
+<P>If you want to see your friends' profiles, click here...</P>
+<button class="button3" onclick="document.location='Social.html'">See profiles</button>
+</div>
+
+</div>
+
+<div id="Special_Offers" class="tabcontent">
+  <div class="coupon5">
+    <div class="container5">
+      <h3>KINGSBURY HOTEL-Colombo 08</h3>
+    </div>
+    <img src="h2i1.jpg" alt="Avatar" style="width:100%;">
+    <div class="container5" style="background-color:rgb(185, 143, 209)">
+      <h2><b>20% OFF for the Beach View Rooms</b></h2> 
+      
+          * Up & Down free Aiport transportation   </span> <br>
+          * 24 Hours open fitness centre with Gym<br>
+          * <span class="yes">20% off</span> for the beach view rooms.<span class="no"> $50    </span><span class="yes">    $40 </span>per night<br>
+          * Rooftop party with DJ,free dinner,drinks and BBQ on every 31st of December.Watch New Year celebration on Rooftop<br>
+          * Special Honeymoon rooms available for the couples.<span class="no"> $200   </span><span class="yes">    $140</span> per night<br>
+          <p>Use Promo Code: <span class="promo">BOH232</span></p><br>
+          <p class="expire">Expires: Aug 03, 2021</p>
+          <button class="button" onclick="document.location='getofferform01.html'">Accept</button>
+         
+        
+        
+    </div>
+  </div>
+  <br>
+  
+  <div class="coupon5">
+      <div class="container5">
+        <h3>QUEENS HOTEL-Kandy</h3>
+      </div>
+      <img src="h1i3.jpg" alt="Avatar" style="width:100%;">
+      <div class="container5" style="background-color:rgb(27, 161, 214)">
+        <h2><b>30% OFF for the Pre Bookings</b></h2> 
+        
+          <span class="yes">30% off</span> for the pre bookings<br>
+          * On Esala Perahera days in July, Upstair rooms are for only <span class="no">  $80   </span><span class="yes">      $60</span> <br>
+          * Free bicycle tour around the Kandy city <br>
+          * Free Hot Water Pool<br>
+          * <span class="yes">40% Discount </span>for the American Express card users & UK Online service users.Grab your chance before on 31st of Decenber 2021 <br>
+         <p>Use Promo Code: <span class="promo">BOH233</span></p><br>
+             <p class="expire">Expires: july 31, 2021</p><br>
+             <button class="button" onclick="document.location='getofferform01.html'">Accept</button>
+          
+      </div>
+    </div>
+    <br>
+  
+  <div class="coupon5">
+      <div class="container5">
+        <h3>Hotel EKHO-Ella</h3>
+      </div>
+      <img src="h3i2.jpg" alt="Avatar" style="width:100%;">
+      <div class="container5" style="background-color:rgb(24, 238, 120)">
+        <h2><b>30% OFF Special Packages</b></h2> 
+       
+          In every weekend free BBQ party with liqures<br>
+          Special discount in this season for the separate Cabana rooms in mountain. <span class="no"> $150</span><span class="yes">   $110 </span>per night<br>
+          Free special breakfast and tea for the American Express card holders<br>
+          In this July - September,<span class="yes"> 60% Off</span>  for the Ayurvedic SPA treatment<br>
+          Free Hot Water Pool with soft drinks<br>
+        <p>Use Promo Code: <span class="promo">BOH234</span></p>
+            <p class="expire">Expires: Sep 03, 2021</p>
+            <button class="button" onclick="document.location='getofferform01.html'">Accept</button>
+        
+          
+      </div>
+    </div>
+    
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+  function myFunction1() {
+    var dots = document.getElementById("dots1");
+    var moreText = document.getElementById("more1");
+    var btnText = document.getElementById("myBtn1");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+  </script>
+
+<script>
+function myFunction2() {
+  var dots = document.getElementById("dots2");
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("myBtn2");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+<script>
+function myFunction3() {
+  var dots = document.getElementById("dots3");
+  var moreText = document.getElementById("more3");
+  var btnText = document.getElementById("myBtn3");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+<script>
+function myFunction4() {
+  var dots = document.getElementById("dots4");
+  var moreText = document.getElementById("more4");
+  var btnText = document.getElementById("myBtn4");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+<script>
+function myFunction5() {
+  var dots = document.getElementById("dots5");
+  var moreText = document.getElementById("more5");
+  var btnText = document.getElementById("myBtn5");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+</body>
+</html>

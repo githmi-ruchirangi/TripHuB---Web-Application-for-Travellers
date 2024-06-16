@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+      
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="style03.css">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: steelblue;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 25px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: skyblue;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.logo img{
+        position: absolute;
+        margin-top: -1px;
+        margin-left: 20px;
+ 
+      }
+
+</style>
+    </head>
+ 
+    <body>
+<div class="logo"><a href="#"><img src="Capture.PNG"></a>
+
+      </div>
+
+ <ul>
+  <li><a href="Log_In.html">Log_In</a></li>
+  <li><a href="About_Us.html">About_Us</a></li>
+  <li><a href="Contact_Us.html">Contact_Us</a></li>
+  <li><a href="Home.html">Home</a></li>
+ 
+</ul>
+        <div class="form-wrapper">
+ 
+            <h1>Sign up</h1>
+             
+            <form>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Your First Name">
+ 
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Your Last Name">
+ 
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+ 
+                <label for="email">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password">
+ 
+                <label for="confirm_password">Conform Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Conform Password">
+ 
+                <input type="submit"></input>
+            </form>
+</div>
+</body>
+</html>
